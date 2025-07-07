@@ -1,5 +1,271 @@
-ul {
-    list-style-type: none;
+* {
     margin: 0;
     padding: 0;
-  }
+    box-sizing: border-box;
+}
+
+:root {
+    --sage-green: #B4B8AB;
+    --dark-blue: #153243;
+    --medium-blue: #284B63;
+    --off-white: #EEF0EB;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    color: var(--dark-blue);
+    background-color: var(--off-white);
+}
+
+/* Header and Navigation */
+header {
+    background-color: var(--off-white);
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-blue);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background-color: var(--sage-green);
+    color: var(--dark-blue);
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.page {
+    display: none;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Homepage Styles */
+.hero {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: var(--medium-blue);
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.hero .subtitle {
+    font-size: 1.5rem;
+    color: var(--sage-green);
+    margin-bottom: 2rem;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--sage-green);
+    margin: 0 auto 2rem;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+}
+
+.intro {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 3rem;
+}
+
+.intro h2 {
+    color: var(--medium-blue);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* General Content Styles */
+.content-section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.content-section h2 {
+    color: var(--medium-blue);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    border-bottom: 2px solid var(--sage-green);
+    padding-bottom: 0.5rem;
+}
+
+.content-section h3 {
+    color: var(--dark-blue);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.content-section p {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* Publications */
+.publication-item {
+    border-left: 4px solid var(--sage-green);
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.publication-item h4 {
+    color: var(--medium-blue);
+    margin-bottom: 0.5rem;
+}
+
+.publication-item .authors {
+    font-style: italic;
+    color: var(--dark-blue);
+    margin-bottom: 0.3rem;
+}
+
+.publication-item .journal {
+    color: var(--sage-green);
+    font-weight: bold;
+}
+
+/* Materials */
+.material-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.material-card {
+    background-color: var(--off-white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--sage-green);
+    transition: transform 0.3s ease;
+}
+
+.material-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.material-card h4 {
+    color: var(--medium-blue);
+    margin-bottom: 0.5rem;
+}
+
+/* Miscellaneous */
+.misc-item {
+    background-color: var(--off-white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--medium-blue);
+}
+
+/* Contact */
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.contact-card {
+    background-color: var(--off-white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.contact-card h4 {
+    color: var(--medium-blue);
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    main {
+        padding: 2rem 1rem;
+    }
+}
