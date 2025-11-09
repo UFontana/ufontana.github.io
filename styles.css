@@ -59,6 +59,23 @@ nav {
     color: var(--dark-blue);
 }
 
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.social-icons a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #0077b5;  /* LinkedIn blue color on hover */
+}
+
 /* Main Content */
 main {
     max-width: 1200px;
