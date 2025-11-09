@@ -291,6 +291,33 @@ main {
     margin-top: 0.5rem;
 }
 
+/* Talks */
+.talks-list {
+    list-style: none;
+    padding: 0;
+}
+
+.talk-entry {
+    margin-bottom: 1.5rem;
+}
+
+.talk-entry h3 {
+    margin-bottom: 0.5rem;
+}
+
+.talk-links {
+    font-size: 0.9rem;
+}
+
+.talk-links a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.talk-links a:hover {
+    text-decoration: underline;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
