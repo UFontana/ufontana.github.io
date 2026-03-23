@@ -161,18 +161,20 @@ main {
 }
 
 .motto-text {
-    font-size: 1.6rem;
+    font-size: 2.4rem;
     font-style: italic;
     color: var(--medium-blue);
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
     text-align: center;
 }
 
 .motto-source {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--sage-green);
     text-align: center;
     font-style: normal;
+    display: block;
+    margin-top: auto;
 }
 
 /* General Content Styles */
