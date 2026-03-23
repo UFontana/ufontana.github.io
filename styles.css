@@ -152,6 +152,29 @@ main {
     text-align: justify;
 }
 
+.motto {
+    text-align: center;
+    margin: 1.5rem auto 0.5rem;
+    padding: 1rem 2rem;
+    border-left: none;
+    max-width: 500px;
+}
+
+.motto-text {
+    font-size: 1.6rem;
+    font-style: italic;
+    color: var(--medium-blue);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.motto-source {
+    font-size: 0.95rem;
+    color: var(--sage-green);
+    text-align: center;
+    font-style: normal;
+}
+
 /* General Content Styles */
 .content-section {
     background-color: white;
