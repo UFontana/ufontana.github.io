@@ -344,17 +344,15 @@ main {
 }
 
 .talks-toggle {
-    padding: 0.5rem 1rem;
-    border: 1px solid var(--medium-blue);
-    border-radius: 5px;
     background-color: transparent;
     color: var(--medium-blue);
     font: inherit;
     cursor: pointer;
+    border: 0;
 }
 
 .talks-toggle:hover {
-    background-color: var(--sage-green);
+    text-decoration: underline;
 }
 
 /* Responsive Design - Tablet (768px and below) */
