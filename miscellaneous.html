@@ -32,7 +32,7 @@
 
         <div class="content-section">
             <h1>Public Talks</h1>
-            <ul class="talks-list">
+            <ul class="talks-list" id="talks-list">
 
                 <li class="talk-entry">
                     <h3> ACTI-X Webinar [09/10/2026] From Automated Abuse to Actionable Intelligence: Bot Detection and Application Monitoring in ACTI-X</h3>
@@ -79,8 +79,38 @@
                 </li>
                 
             </ul>
+            <button class="talks-toggle" type="button" aria-controls="talks-list" aria-expanded="false" hidden>Show more</button>
         </div>
         
     </main>
+    <script>
+        const talksList = document.querySelector(".talks-list");
+        const talksToggle = document.querySelector(".talks-toggle");
+        const talks = talksList.querySelectorAll(".talk-entry");
+        const visibleTalkCount = 5;
+
+        if (talks.length > visibleTalkCount) {
+            talksToggle.hidden = false;
+
+            talks.forEach((talk, index) => {
+                if (index >= visibleTalkCount) {
+                    talk.hidden = true;
+                }
+            });
+
+            talksToggle.addEventListener("click", () => {
+                const expanded = talksToggle.getAttribute("aria-expanded") === "true";
+
+                talks.forEach((talk, index) => {
+                    if (index >= visibleTalkCount) {
+                        talk.hidden = expanded;
+                    }
+                });
+
+                talksToggle.setAttribute("aria-expanded", String(!expanded));
+                talksToggle.textContent = expanded ? "Show more" : "Show less";
+            });
+        }
+    </script>
 </body>
 </html>

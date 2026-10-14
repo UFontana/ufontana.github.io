@@ -343,6 +343,20 @@ main {
     text-decoration: underline;
 }
 
+.talks-toggle {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--medium-blue);
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--medium-blue);
+    font: inherit;
+    cursor: pointer;
+}
+
+.talks-toggle:hover {
+    background-color: var(--sage-green);
+}
+
 /* Responsive Design - Tablet (768px and below) */
 @media (max-width: 768px) {
     /* Header and Navigation */
